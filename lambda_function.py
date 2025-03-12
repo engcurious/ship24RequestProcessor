@@ -27,7 +27,7 @@ def lambda_handler(event, context):
                     "body": json.dumps({"error": "Invalid JSON in request body"})
                 }
         else:
-            event_body = event  # If there's no "body", use the whole event as is.
+            event_body = event  # If there's no "body", use the whole event as is
 
         # Extract relevant fields from each tracking event
         for tracking in event_body.get("trackings", []):
